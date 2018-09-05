@@ -1,12 +1,58 @@
+<!-- CS-5890 Homework 1 -->
+<!-- Travis Floyd       -->
+<!-- travis.floyd@aggiemail.usu.edu -->
+<!-- A# -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>CS5890 Homework 1 </title>
 		<style>
+			h1#big {
+				color: red;
+			}
+			h1#director {
+				color: blue;
+			}
+			h1#style {
+				color: green;
+				background-color: indianred;
+			}
+			h1.important {
+				background-color: fuchsia;
+			}
+			
+			rect {
+				fill: blue;
+				stroke: red;
+			}
+			line {
+				stroke: red;
+			}
 		</style>
 	</head>
 	<body>
-	<h1>This is great! Visual Studio for life!</h1>
+		<h1 class="mundane" id="big">Big Heading</h1>
+		This is great! <strong>Visual Studio</strong> is life!
+		
+		<h1 class="important" id="director">Star Wars Mantre</h1>
+		<em>J. J. Abrams</em> is the man
+		<br>
+		<svg width=100 height=100>
+			<g transform="translate(20, 100) scale(1, -1)">
+			<rect x=0 y=0 width=10 height=100></rect>
+			<rect x=12 y=0 width=10 height=70></rect>
+			<rect x=24 y=0 width=10 height=85></rect>
+			</g>
+		</svg>
+		
+		<svg width=100 height=100>
+			<g transform="translate(0, 100) scale(1, -1)">
+			<line x1="0" y1="10" x2="30" y2="30"/>
+			<line x1="30" y1="30" x2="60" y2="20"/>
+			<line x1="60" y1="20" x2="90" y2="50"/>
+			</g>
+		</svg>
 	</body>
 </html>
