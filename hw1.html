@@ -9,49 +9,102 @@
 		<meta charset="utf-8">
 		<title>CS5890 Homework 1 </title>
 		<style>
-			h1#big {
-				color: red;
-			}
-			h1#director {
-				color: blue;
-			}
-			h1#style {
-				color: green;
-				background-color: indianred;
-			}
-			h1.important {
-				background-color: fuchsia;
-			}
-			
 			rect {
+				fill: none;
+				stroke: black;
+			}
+			rect.y {
+				fill: green;
+				stroke: none;
+			}
+			rect.x {
 				fill: blue;
-				stroke: red;
+				stroke: none;
 			}
 			line {
 				stroke: red;
 			}
+			path.nofill {
+				fill: none;
+				stroke: blue;
+			}
+			circle {
+				fill: purple;
+			}
 		</style>
 	</head>
 	<body>
-		<h1 class="mundane" id="big">Big Heading</h1>
-		This is great! <strong>Visual Studio</strong> is life!
-		
-		<h1 class="important" id="director">Star Wars Mantre</h1>
-		<em>J. J. Abrams</em> is the man
+		<h1>Bar Graph of X and Y</h1>
 		<br>
-		<svg width=100 height=100>
-			<g transform="translate(20, 100) scale(1, -1)">
-			<rect x=0 y=0 width=10 height=100></rect>
-			<rect x=12 y=0 width=10 height=70></rect>
-			<rect x=24 y=0 width=10 height=85></rect>
+		<svg width=500 height=200>
+			<g transform="translate(0, 150) scale(1, -10)">
+			<rect class=x x=0 y=0 width=10 height=10></rect>
+			<rect class=x x=12 y=0 width=10 height=8></rect>
+			<rect class=x x=24 y=0 width=10 height=13></rect>
+			<rect class=x x=36 y=0 width=10 height=9></rect>
+			<rect class=x x=48 y=0 width=10 height=11></rect>
+			<rect class=x x=60 y=0 width=10 height=14></rect>
+			<rect class=x x=72 y=0 width=10 height=6></rect>
+			<rect class=x x=84 y=0 width=10 height=4></rect>
+			<rect class=x x=96 y=0 width=10 height=12></rect>
+			<rect class=x x=108 y=0 width=10 height=7></rect>
+			<rect class=x x=120 y=0 width=10 height=5></rect>
+			<rect class="y" x=200 y=0 width=10 height=7.46></rect>
+			<rect class="y" x=212 y=0 width=10 height=6.77></rect>
+			<rect class="y" x=224 y=0 width=10 height=12.74></rect>
+			<rect class="y" x=236 y=0 width=10 height=7.11></rect>
+			<rect class="y" x=248 y=0 width=10 height=7.81></rect>
+			<rect class="y" x=260 y=0 width=10 height=8.84></rect>
+			<rect class="y" x=272 y=0 width=10 height=6.08></rect>
+			<rect class="y" x=284 y=0 width=10 height=5.39></rect>
+			<rect class="y" x=296 y=0 width=10 height=8.15></rect>
+			<rect class="y" x=308 y=0 width=10 height=6.42></rect>
+			<rect class="y" x=320 y=0 width=10 height=5.73></rect>
 			</g>
 		</svg>
-		
-		<svg width=100 height=100>
-			<g transform="translate(0, 100) scale(1, -1)">
-			<line x1="0" y1="10" x2="30" y2="30"/>
-			<line x1="30" y1="30" x2="60" y2="20"/>
-			<line x1="60" y1="20" x2="90" y2="50"/>
+		<br>
+		<h1>Line Graph of X and Y</h1>
+		<br>
+		<svg width=600 height=200 >
+			<g transform="translate(0, 150) scale(1, -9)">
+			<path class="nofill" d="M0 10 L20 8 L30 13 L40 9 L50 11 L60 14 L70 6 L80 4 L90 12 L100 7 L110 5"/>
+			<line x1="210" y1="7.46" x2="220" y2="6.77"/>
+			<line x1="220" y1="6.77" x2="230" y2="12.74"/>
+			<line x1="230" y1="12.74" x2="240" y2="7.11"/>
+			<line x1="240" y1="7.11" x2="250" y2="7.81"/>
+			<line x1="250" y1="7.81" x2="260" y2="8.84"/>
+			<line x1="260" y1="8.84" x2="270" y2="6.08"/>
+			<line x1="270" y1="6.08" x2="280" y2="5.39"/>
+			<line x1="280" y1="5.39" x2="290" y2="8.15"/>
+			<line x1="290" y1="8.15" x2="300" y2="6.42"/>
+			<line x1="300" y1="6.42" x2="310" y2="5.73"/>
+			</g>
+		</svg>
+		<br>
+		<h1>Area Charts of X and Y</h1>
+		<br>
+		<svg width=600 height=200>
+			<g transform="translate(0, 150) scale(1, -9)">
+			<path d="M10 10 L20 8 L30 13 L40 9 L50 11 L60 14 L70 6 L80 4 L90 12 L100 7 L110 5 L110 0 L10 0 L10 10" fill="red"/>
+			<path d="M210 7.46 L220 6.77 L230 12.74 L240 7.11 L250 7.81 L260 8.84 L270 6.08 L280 5.39 L290 8.15 L300 6.42 L310 5.73 L310 0 L210 0 L210 7.46" fill="green"/>
+			</g>
+		</svg>
+		<br>
+		<h1>Scatter Plot of X,Y</h1>
+		<svg width="200" height="200">
+			<g transform="translate(0,150) scale(8,-8)">
+			<circle cx="10" cy="7.46" r="0.5"/>
+			<circle cx="8" cy="6.77" r="0.5"/>
+			<circle cx="13" cy="12.74" r="0.5"/>
+			<circle cx="9" cy="7.11" r="0.5"/>
+			<circle cx="11" cy="7.81" r="0.5"/>
+			<circle cx="14" cy="8.84" r="0.5"/>
+			<circle cx="6" cy="6.08" r="0.5"/>
+			<circle cx="4" cy="5.39" r="0.5"/>
+			<circle cx="12" cy="8.15" r="0.5"/>
+			<circle cx="7" cy="6.42" r="0.5"/>
+			<circle cx="5" cy="5.73" r="0.5"/>
+			<rect x=0 y=0 width=100 height=100></rect>
 			</g>
 		</svg>
 	</body>
